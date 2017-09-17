@@ -12,7 +12,6 @@ export class CarService {
     return this.http.get(this.carsUrl)
       .toPromise()
       .then(response => {
-        // console.log(response.json().data);
         return response.json().data as Car[];
       })
       .catch(this.handleError);
